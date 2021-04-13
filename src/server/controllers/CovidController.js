@@ -7,7 +7,7 @@ exports.getData = async function (req, res, next) {
     let covidata = await db.Covidata.findById(req.params.data_id);
     return apiResponse.successResponseWithData(
       res,
-      "Login Successfull",
+      "Data Fetched Successfully",
       covidata
     );
   } catch (err) {

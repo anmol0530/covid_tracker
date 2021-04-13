@@ -1,5 +1,6 @@
 require("dotenv").config({ path: "../.env" });
 const jwt = require("jsonwebtoken");
+const { unauthenticatedResponse } = require("../helpers/apiResponse");
 
 // making sure the user is logged in
 exports.loginRequired = function (req, res, next) {
@@ -9,17 +10,11 @@ exports.loginRequired = function (req, res, next) {
       if (decoded) {
         return next();
       } else {
-        return next({
-          status: 401,
-          message: "Please log in first",
-        });
+        return unauthenticatedResponse(res, "Please login first!");
       }
     });
   } catch (e) {
-    return next({
-      status: 401,
-      message: "Please log in first",
-    });
+    return unauthenticatedResponse(res, "Please login first!");
   }
 };
 
@@ -30,16 +25,10 @@ exports.ensureCorrectUser = function (req, res, next) {
       if (decoded && decoded.id === req.params.id) {
         return next();
       } else {
-        return next({
-          status: 401,
-          message: "Unauthorized",
-        });
+        return unauthenticatedResponse(res, "Unauthorized");
       }
     });
   } catch (e) {
-    return next({
-      status: 401,
-      message: "Unauthorized",
-    });
+    return unauthenticatedResponse(res, "Unauthorized");
   }
 };

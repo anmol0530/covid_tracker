@@ -4,14 +4,23 @@ const path = require("path");
 module.exports = {
   mode: "development",
   // entry: path.resolve(__dirname, `src`, `app`),
+
   devServer: {
+    inline: true,
+    contentBase: "./dist",
+    port: 8080,
     historyApiFallback: true,
+    proxy: { "/api": { target: "http://localhost:8081", secure: false } },
   },
   module: {
     rules: [
       {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.jsx?/,
@@ -41,4 +50,5 @@ module.exports = {
       template: path.resolve(__dirname, "src", "index.html"),
     }),
   ],
+  cache: true,
 };

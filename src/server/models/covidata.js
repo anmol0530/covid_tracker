@@ -16,6 +16,12 @@ const covidataSchema = new mongoose.Schema(
     //   type: String,
     //   required: true,
     // },
+    // dateAnnounced: {
+    //   type: Date,
+    // },
+    // source1: {
+    //   type: String,
+    // },
   },
   { collection: "covid_data" }
 );

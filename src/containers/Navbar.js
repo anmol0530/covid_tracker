@@ -6,10 +6,10 @@ import Logo from "../images/logo.png";
 import { logout } from "../store/actions/auth";
 
 class Navbar extends Component {
-  // logout = (e) => {
-  //   e.preventDefault();
-  //   this.props.logout();
-  // };
+  logout = (e) => {
+    e.preventDefault();
+    this.props.logout();
+  };
 
   render() {
     return (

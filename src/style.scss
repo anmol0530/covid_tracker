@@ -12,8 +12,10 @@ body {
 .container {
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
+  // flex-wrap: wrap;
   align-items: center;
-  height: 200px;
+  // height: 200px;
 }
 
 // Navbar
@@ -67,7 +69,7 @@ ul.nav.navbar-nav li {
   color: black;
   text-align: center;
   padding: 1rem;
-  background-image: url("./images/homepage.jpg");
+  // background-image: url("./images/homepage.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -78,18 +80,19 @@ ul.nav.navbar-nav li {
 
 .cards {
   display: flex;
-  // justify-content: space-around;
+  justify-content: space-around;
   flex-wrap: wrap;
   // align-content: flex-start;
-  // flex-direction: row;
+  flex-direction: row;
 }
 
 .cards > .card {
-  width: 380px;
+  width: 400px;
+  margin: 10px;
 }
 
-.cards > .card h6,
-h5 {
-  display: inline;
-  position: right;
-}
+// .cards > .card h6,
+// h5 {
+//   display: inline;
+//   // position: right;
+// }

@@ -31,10 +31,10 @@ exports.signin = async function (req, res, next) {
         token,
       });
     } else {
-      return apiResponse.ErrorResponse(res, "Invalid Username/Email/Password");
+      return apiResponse.ErrorResponse(res, "Invalid Username/Email/Pafssword");
     }
   } catch (e) {
-    return apiResponse.ErrorResponse(res, "Invalid Username/Email/Password");
+    return apiResponse.ErrorResponse(res, "Invalid Username/Email/Pafssword");
   }
 };
 

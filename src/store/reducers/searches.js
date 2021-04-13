@@ -1,4 +1,4 @@
-import { findByLabelText } from "@testing-library/react";
+// import { findByLabelText } from "@testing-library/react";
 import { LOAD_SEARCHES, REMOVE_SEARCH } from "../actionTypes";
 
 const search = (state = [], action) => {
