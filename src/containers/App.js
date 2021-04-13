@@ -2,11 +2,11 @@ import React from "react";
 import { Provider } from "react-redux";
 import { configureStore } from "../store";
 import { BrowserRouter as Router } from "react-router-dom";
-import Cards from "../components/Cards";
-import Chart from "../components/Chart";
+
 import "../style.scss";
 import Navbar from "./Navbar";
 import Main from "./Main";
+import Dashboard from "../components/Dashboard";
 // import { setAuthorizationToken, setCurrentUser } from "../store/actions/auth";
 // import jwtDecode from "jwt-decode";
 
@@ -30,8 +30,7 @@ const App = () => (
         <Main />
       </div>
       <div className="container">
-        <Cards />
-        <Chart />
+        <Dashboard />
       </div>
     </Router>
   </Provider>
