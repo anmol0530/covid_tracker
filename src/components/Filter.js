@@ -27,37 +27,37 @@ class Filter extends React.Component {
           <option>5</option>
         </select>
       </div> */}
-        <div class="form-row row">
+        <div className="form-row row">
           {/* <div className="form-group col-md-1">Filters:</div> */}
-          <div class="form-group col-md-2">
+          <div className="form-group col-md-2">
             <label for="inputState">Location</label>
             <select id="inputState" class="form-control">
               <option selected>Choose...</option>
               <option>...</option>
             </select>
           </div>
-          <div class="form-group col-md-2">
+          <div className="form-group col-md-2">
             <label for="inputState">Gender</label>
             <select id="inputState" class="form-control">
               <option selected>Choose...</option>
               <option>...</option>
             </select>
           </div>
-          <div class="form-group col-md-2">
+          <div className="form-group col-md-2">
             <label for="inputState">Age</label>
             <select id="inputState" class="form-control">
               <option selected>Choose...</option>
               <option>...</option>
             </select>
           </div>
-          <div class="form-group col-md-2">
+          <div className="form-group col-md-2">
             <label for="inputState">Status</label>
             <select id="inputState" class="form-control">
               <option selected>Choose...</option>
               <option>...</option>
             </select>
           </div>
-          <div class="form-group col-md-2">
+          <div className="form-group col-md-2">
             <DateRangePicker
               startDate={this.state.startDate} // momentPropTypes.momentObj or null,
               startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,

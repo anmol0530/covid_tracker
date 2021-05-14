@@ -1,3 +1,4 @@
+require("dotenv").config({ path: "../.env" });
 const db = require("../models");
 const jwt = require("jsonwebtoken");
 const apiResponse = require("../helpers/apiResponse");
@@ -31,10 +32,10 @@ exports.signin = async function (req, res, next) {
         token,
       });
     } else {
-      return apiResponse.ErrorResponse(res, "Invalid Username/Email/Pafssword");
+      return apiResponse.ErrorResponse(res, "Invalid Username/Email/Password");
     }
   } catch (e) {
-    return apiResponse.ErrorResponse(res, "Invalid Username/Email/Pafssword");
+    return apiResponse.ErrorResponse(res, "Invalid Username/Email/Password");
   }
 };
 

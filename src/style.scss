@@ -11,11 +11,18 @@ body {
 
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: column;
+  padding: 20px;
   // flex-wrap: wrap;
-  align-items: center;
+  // align-items: space-between;
   // height: 200px;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 100%;
+  }
 }
 
 // Navbar
@@ -87,7 +94,7 @@ ul.nav.navbar-nav li {
 }
 
 .cards > .card {
-  width: 400px;
+  width: 520px;
   margin: 10px;
 }
 

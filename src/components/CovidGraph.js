@@ -44,7 +44,7 @@ class CovidGraph extends React.Component {
           colors: ["#fff"],
         },
         title: {
-          text: "Fiction Books Sales",
+          text: "Toll Summary",
         },
         xaxis: {
           categories: [2008, 2009, 2010, 2011, 2012, 2013, 2014],

@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-// before we save the user we need to modify that password by hashing with 'pre' hook
+// before we save the user we need to modify the password by hashing with 'pre' hook
 userSchema.pre("save", async function (next) {
   // try catch to handle errors
   try {
@@ -29,7 +29,7 @@ userSchema.pre("save", async function (next) {
     }
     // 1 param - a password, 2 param - a salt (work factor) - very important!
     // idea of salting is taking a bit of additional information and putting it into the hash so that the hashes are different for the same password
-    // if we were to just take a piece of text and hash it, someone else could technically build a table that does that same exact algorithm and figure out what hash corresponds to a password
+    // if we were to just take a piece of text and hash it, someone else could technically build a table that uses the same exact algorithm and figure out what hash corresponds to a password
     let hashedPassword = await bcrypt.hash(this.password, 10);
     this.password = hashedPassword;
     return next();
